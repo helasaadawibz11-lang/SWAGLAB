@@ -34,7 +34,7 @@ public class ProductStep {
         //driver=new ChromeDriver();
       // driver.manage().window().maximize();
        // this.driver=Hook.driver;
-        loginpage=new LoginPage(driver);
+        //loginpage=new LoginPage(driver);
         driver.get("https://www.saucedemo.com/");
         loginpage.enterusername("standard_user");
         loginpage.enterpassword("secret_sauce");
