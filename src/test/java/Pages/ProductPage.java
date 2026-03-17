@@ -223,7 +223,6 @@ public class ProductPage {
 
         // 2. Comparaison d'images
 
-
         Mat result = new Mat();
         Imgproc.matchTemplate(scene, template, result, Imgproc.TM_CCOEFF_NORMED);
 
