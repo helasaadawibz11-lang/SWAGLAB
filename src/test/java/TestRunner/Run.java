@@ -7,10 +7,10 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         // Chemin vers vos fichiers .feature
-        features = "src/test/java/Features/Product.feature",
+        features = "src/test/java/Features/Checkout.feature",
         // Chemin vers vos Step Definitions et Hooks
         glue = "Steps",
-        tags = "@Product",
+        tags = "@Test",
 
         // Plugins pour la génération des rapports
         plugin = {
