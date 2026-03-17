@@ -1,0 +1,17 @@
+name: Selenium Java Tests
+on:
+  workflow_dispatch: # Permet à n8n de déclencher le test via API
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: maven
+      - name: Run Tests with Maven
+        run: mvn test
