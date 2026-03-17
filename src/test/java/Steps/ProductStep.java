@@ -33,7 +33,7 @@ public class ProductStep {
     public void je_suis_sur_la_page_dacceuil() {
         //driver=new ChromeDriver();
       // driver.manage().window().maximize();
-        this.driver=Hook.driver;
+       // this.driver=Hook.driver;
         loginpage=new LoginPage(driver);
         driver.get("https://www.saucedemo.com/");
         loginpage.enterusername("standard_user");
