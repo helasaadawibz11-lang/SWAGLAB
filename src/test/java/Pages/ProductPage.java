@@ -42,7 +42,7 @@ public class ProductPage {
     By Firstname = By.id("first-name");
     By Lastname=By.id("last-name");
     By codepostal=By.id("postal-code");
-    By ContinueBtn =By.id("continue1234566");
+    By ContinueBtn =By.id("continue");
     By Finish=By.id("finish");
     By MsgSuccesfulCheckout=By.cssSelector("#checkout_complete_container > h2");
     By msgcheckoutfailed =By.xpath("//*[@id=\"checkout_info_container\"]/div/form/div[1]/div[4]/h3");
