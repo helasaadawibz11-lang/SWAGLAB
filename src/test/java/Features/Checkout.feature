@@ -4,7 +4,7 @@ Feature: tester le checkout
     And je click sur le bouton AddToCart
     And je click sur le bouton AddToCart DeuxiemeProduit
     And je click sur le panier
-
+@Test
     Scenario: test valide de la fonction checkout
       When je click checkout
       And je saisi Firstname "hela"
