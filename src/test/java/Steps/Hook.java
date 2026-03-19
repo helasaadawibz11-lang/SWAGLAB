@@ -18,7 +18,7 @@ public class Hook {
     @Before
     public void setup() {
         if (driver == null) {
-            WebDriverManager.chromedriver().setup();
+            //WebDriverManager.chromedriver().setup();
             ChromeOptions options = new ChromeOptions();
             options.addArguments("--headless"); // Mode sans interface graphique
             options.addArguments("--no-sandbox");

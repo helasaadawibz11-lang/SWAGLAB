@@ -19,7 +19,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class ProductStep {
-    WebDriver driver =Hook.driver;
+    WebDriver driver ;
    // WebDriver driver ;
     LoginPage loginpage ;
     ProductPage productPage;

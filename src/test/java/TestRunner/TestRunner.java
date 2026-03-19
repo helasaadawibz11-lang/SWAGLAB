@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         // Chemin vers vos fichiers .feature
-        features = "src/test/java/Features/Checkout.feature",
+        features = "src/test/java/Features/Login.feature",
         // Chemin vers vos Step Definitions et Hooks
         glue = "Steps",
         tags = "@Test",
@@ -22,5 +22,5 @@ import org.junit.runner.RunWith;
 
 )
 
-public class Run {
+public class TestRunner {
 }
