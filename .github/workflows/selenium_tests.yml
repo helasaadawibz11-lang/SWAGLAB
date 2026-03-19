@@ -19,5 +19,5 @@ jobs:
       - name: Notify n8n of result
         if: always()
         run: |
-            curl -X POST https://jobgate.app.n8n.cloud/webhook-test/resultat-selenium \
+            curl -X POST https://evaa11.app.n8n.cloud/webhook-test/resultselenium \
             -d "status=${{ job.status }}"
