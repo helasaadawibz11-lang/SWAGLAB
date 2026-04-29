@@ -1,7 +1,8 @@
 Feature: Tester la connexion au site "Swaglab"
-  @Test
-  Scenario: Test Login avec les identifiants valides
-Given je suis sur la page Login
+
+  Background: Test Login avec les identifiants valides
+ // Scenario: Test Login avec les identifiants valides
+    Given je suis sur la page Login
   When je saisi l'username "standard_user"
   And je saisi le mot de passe "secret_sauce"
   And je click sur le bouton Login
@@ -21,7 +22,7 @@ Given je suis sur la page Login
       |  standard_use |secret_sauc| Username and password do not match any user in this service  |
       |  locked_out_user |secret_sauce| Sorry, this user has been locked out.                   |
 
-    @logout
+  @Test
   Scenario: test logout
     When je click sur menuBtn
     And je click sur logoutSidebarBtn

@@ -20,14 +20,14 @@ public class Hook {
         if (driver == null) {
             //WebDriverManager.chromedriver().setup();
             ChromeOptions options = new ChromeOptions();
-            options.addArguments("--headless"); // Mode sans interface graphique
-            options.addArguments("--no-sandbox");
-            options.addArguments("--disable-dev-shm-usage");
+          //  options.addArguments("--headless"); // Mode sans interface graphique
+          //  options.addArguments("--no-sandbox");
+          //  options.addArguments("--disable-dev-shm-usage");
            // WebDriver driver = new ChromeDriver(options);
             driver = new ChromeDriver(options);
 
            // driver = new ChromeDriver();
-           // driver.manage().window().maximize();
+            driver.manage().window().maximize();
         }
     }
 
@@ -44,8 +44,8 @@ public class Hook {
                 }
             }
             // On ferme et on remet à null pour le prochain test
-            driver.quit();
-            driver = null;
+            /*driver.quit();
+            driver = null; */
         }
     }
 }

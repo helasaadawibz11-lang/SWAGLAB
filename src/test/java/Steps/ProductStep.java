@@ -109,8 +109,8 @@ public class ProductStep {
 
     @When("je click checkout")
     public void jeClickCheckout() {productPage.ClickCheckout();productPage.verifcheckoutPage();
-     productPage.calculTotalPanier();
-     System.out.println("total panier est" +productPage.calculTotalPanier());
+        //productPage.calculTotalPanier();
+       // System.out.println("total panier est" +productPage.calculTotalPanier());
       }
 
     @And("je saisi Firstname {string}")
@@ -144,6 +144,9 @@ public class ProductStep {
 
  @Then("le total checkout est correct")
  public void leTotalCheckoutEstCorrect() {
+
+     productPage.calculTotalPanier();
+     System.out.println("total panier est" +productPage.calculTotalPanier());
      productPage.veriftotalprice();
 
  }

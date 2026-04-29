@@ -209,7 +209,7 @@ public class ProductPage {
     public void veriftotalprice(){
 
         double TotalAvantTax= Double.parseDouble(driver.findElement(totalavantTax).getText().replace("Item total: $", ""));
-        Assert.assertEquals("total erroné",calculTotalPanier(),TotalAvantTax);
+        Assert.assertEquals("total erroné",calculTotalPanier(),TotalAvantTax,0.01);
         double tax1= Double.parseDouble(driver.findElement(Tax).getText().replace("Tax: $", ""));
         double Totalfinal1= TotalAvantTax+tax1;
         double totalfinalAffiché= Double.parseDouble(driver.findElement(TotalFinal).getText().replace("Total: $", ""));
