@@ -9,7 +9,7 @@ Construit avec une approche **BDD (Behavior-Driven Development)**, il valide la 
 
 | Métrique | Indicateur | Description |
 | :--- | :---: | :--- |
-| **Total Scénarios de Test** | **23** | Scénarios automatisés globaux |
+| **Total Scénarios de Test** | **32** | Scénarios automatisés globaux |
 | **Couverture Fonctionnelle** | **100%** | Modules critiques du tunnel d'achat couverts |
 | **Types de Tests** | `Smoke` `Regression` `Security` `UI/UX` | Approche de test multi-niveaux |
 | **Design Pattern** | `POM` + `Page Factory` | Architecture modulaire et découplée |
@@ -22,8 +22,8 @@ Construit avec une approche **BDD (Behavior-Driven Development)**, il valide la 
 | :--- | :---: | :--- |
 | **🔐 Login** | `[████████]` | 5 Scénarios (incluant 11 jeux de données) |
 | **🚪 Logout** | `[██████]` | 4 Scénarios |
-| **🛍️ Product Page** | `[█████████]` | 6 Scénarios |
-| **💳 Checkout** | `[████████]` | 8 Scénarios |
+| **🛍️ Product Page** | `[█████████]` | 12 Scénarios |
+| **💳 Checkout** | `[████████]` | 11 Scénarios |
 
 ---
 #### 🗺️ **Matrice de Couverture Fonctionnelle**
@@ -51,6 +51,7 @@ Construit avec une approche **BDD (Behavior-Driven Development)**, il valide la 
 | | `Régression` | Annulation à l'étape 1 ou 2 avec contrôle de persistance du panier | ✅ |
 | | `Limites` | Tentative de Checkout avec un panier vide (Détection d'anomalie) | ❌ |
 | | `Navigation` | Persistance du panier en cas de retour arrière navigateur | ✅ |
+| | `Navigation` | Destruction de session après retour forcé à la page Login | ❌ |
 
 ---
 
