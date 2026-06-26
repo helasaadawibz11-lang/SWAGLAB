@@ -18,7 +18,7 @@ Construit avec une approche **BDD (Behavior-Driven Development)**, il valide la 
 
 ### 📈 Répartition des Cas de Test par Module
 
-```text
+
 📦 Total Suite (23 Scénarios)
 ├── 🔐 Login           [████████] 5 Scénarios (incluant 11 jeux de données)
 ├── 🚪 Logout          [██████]   4 Scénarios
