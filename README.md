@@ -18,12 +18,12 @@ Construit avec une approche **BDD (Behavior-Driven Development)**, il valide la 
 
 ### 📈 Répartition des Cas de Test par Module
 
-
-📦 Total Suite (23 Scénarios)
-├── 🔐 Login           [████████] 5 Scénarios (incluant 11 jeux de données)
-├── 🚪 Logout          [██████]   4 Scénarios
-├── 🛍️ Product Page    [█████████] 6 Scénarios
-└── 💳 Checkout        [████████]   8 Scénarios
+| Module | Progression / Visuel | Nombre de Scénarios |
+| :--- | :---: | :--- |
+| **🔐 Login** | `[████████]` | 5 Scénarios (incluant 11 jeux de données) |
+| **🚪 Logout** | `[██████]` | 4 Scénarios |
+| **🛍️ Product Page** | `[█████████]` | 6 Scénarios |
+| **💳 Checkout** | `[████████]` | 8 Scénarios |
 
 ---
 #### 🗺️ **Matrice de Couverture Fonctionnelle**
@@ -31,7 +31,7 @@ Construit avec une approche **BDD (Behavior-Driven Development)**, il valide la 
 | Module | Type de Test | Objectif du Scénario | Statut |
 | :--- | :---: | :--- | :---: |
 | **🔐 Login** | `Nominal` | Connexion utilisateur standard avec identifiants valides | ✅ |
-| | `Sécurité` | Robustesse face aux injections SQL (`OR 1=1 --`) & caractères spéciaux | ✅ |
+| | `Sécurité` | Robustesse face aux injections SQL (`OR 1=1 --`) & caractères spéciaux | ❌ |
 | | `Sécurité` | Blocage d'accès direct aux pages internes sans session active | ✅ |
 | | `UI / UX` | Soumission du formulaire via la touche `Entrée` du clavier | ✅ |
 | | `UI / UX` | Masquage des caractères dans le champ Mot de Passe | ✅ |
@@ -46,10 +46,10 @@ Construit avec une approche **BDD (Behavior-Driven Development)**, il valide la 
 | | `UI / UX` | Conformité visuelle de l'icône panier par rapport à une référence | ✅ |
 | | `Fonctionnel` | Cohérence des données (Nom, Prix, Description) sur la page détail | ✅ |
 | **💳 Checkout** | `Nominal` | Tunnel d'achat complet avec informations valides (*Happy Path*) | ✅ |
-| | `Données` | Validation des champs obligatoires via `Scenario Outline` (6 cas limites) | ✅ |
+| | `Données` | Validation des champs obligatoires via `Scenario Outline` (6 cas limites) | ❌ |
 | | `Calculs` | Vérification mathématique exacte (Prix + Taxe = Total) | ✅ |
 | | `Régression` | Annulation à l'étape 1 ou 2 avec contrôle de persistance du panier | ✅ |
-| | `Limites` | Tentative de Checkout avec un panier vide (Détection d'anomalie) | ✅ |
+| | `Limites` | Tentative de Checkout avec un panier vide (Détection d'anomalie) | ❌ |
 | | `Navigation` | Persistance du panier en cas de retour arrière navigateur | ✅ |
 
 ---
