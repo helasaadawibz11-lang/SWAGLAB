@@ -143,3 +143,17 @@ Feature: tester la gestion du checkout , verification de la commande et validati
 
 
 
+    @test
+    #Tester la Destruction de la session et blocage après retour forcé à la page Login
+  Scenario: Destruction de la session et blocage après retour forcé à la page Login
+    Given j'ai des articles dans mon panier et je suis sur mon panier
+    When je click checkout
+    And je saisi Firstname "Hela"
+    And je saisi Lastname "S"
+    And je saisi Codepostal "34000"
+    And je click Continue
+    And l'utilisateur force la navigation vers la page de "Login"
+    And lutilisateur tente daccéder directement à l URL de la page Products sans se reconnecter
+    Then l accès est refusé et l utilisateur est maintenu sur la page de Login
+
+

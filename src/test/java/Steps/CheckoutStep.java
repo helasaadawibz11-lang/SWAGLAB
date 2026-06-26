@@ -222,4 +222,37 @@ public class CheckoutStep {
         driver.navigate().back();
         System.out.println("click bouton retour page precedante reussi ! ");
     }
+
+
+
+
+    @When("l'utilisateur force la navigation vers la page de {string}")
+    public void lUtilisateurForceLaNavigationVersLaPageDe(String arg0) {
+        driver.navigate().back();
+
+        driver.navigate().back();
+
+        driver.navigate().back();
+
+        driver.navigate().back();
+        System.out.println("navigation en arriere vers la page login reussie , la page actuel est :  "+driver.getCurrentUrl());
+    }
+
+
+    @And("lutilisateur tente daccéder directement à l URL de la page Products sans se reconnecter")
+    public void lutilisateurTenteDaccéderDirectementÀLURLDeLaPageProductsSansSeReconnecter() {
+        driver.navigate().forward();
+        System.out.println("navigation de retour vers la page produits en cours ... ");
+
+    }
+
+    @Then("l accès est refusé et l utilisateur est maintenu sur la page de Login")
+    public void lAccèsEstRefuséEtLUtilisateurEstMaintenuSurLaPageDeLogin() {
+        String ActualURL= driver.getCurrentUrl();
+        System.out.println("navigation vers la page suivante reussi "+ActualURL);
+        String ExpectedURL="https://www.saucedemo.com/";
+
+        Assert.assertEquals("blocage au niveau de la page login " +
+                "pour authentification n'est pas reussi ",ExpectedURL,ActualURL);
+    }
 }
