@@ -144,6 +144,7 @@ Feature: tester la gestion du checkout , verification de la commande et validati
 
 
     @test
+
     #Tester la Destruction de la session et blocage après retour forcé à la page Login
   Scenario: Destruction de la session et blocage après retour forcé à la page Login
     Given j'ai des articles dans mon panier et je suis sur mon panier

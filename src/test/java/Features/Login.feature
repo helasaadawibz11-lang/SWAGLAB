@@ -57,6 +57,7 @@ Feature: Tester la connexion au site "Swaglab" Module Login
 
 
   #security #ui
+
   Scenario: Vérifier le masquage du mot de passe dans le formulaire
     Given je suis sur la page Login
     When je saisi le mot de passe "secret_sauce"
